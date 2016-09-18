@@ -1,6 +1,5 @@
 import getOppositePlacement from '../utils/getOppositePlacement';
 import getPopperClientRect from '../utils/getPopperClientRect';
-import getOffsets from '../utils/getOffsets';
 import isModifierRequired from '../utils/isModifierRequired';
 import runModifiers from '../utils/runModifiers';
 
