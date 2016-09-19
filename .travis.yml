@@ -1,9 +1,10 @@
 language: node_js
-node_js: 6.2
-before_script: npm install -g grunt-cli
-script: grunt test-ci --browsers=SLChrome,SLFirefox,SLEdge,SLSafari,SLInternetExplorer10,SLInternetExplorer11
-addons:
-  sauce_connect:
-    username: dylanatsauce
-  jwt:
-    secure: "KejuR4oTLAXXGGuSITcSdcfwQz913ul0u5hoOErfSV3j3TceKTaajoGX1UtJO6G3k5PaZakvMUbT0ZEVCzkXi37RaEba+2ScmDieAzySpYuDJrfFyfDnbp8YfOF+2GoKzxfD0hin2mO8uzpGVLKjSndKoGvvnG7EbGkOgY71QNzhQdedTD4ZbZgKTS8KRAghjYpzCJThiQfVqBxum6JCA8/7qE+Pb5kU2doZaLm59p3kSU326Xp/VotReP4+rOmN4GcxXqJ5ZNI1JTxYxLNYPObTehz3qsUlHHMoo04f1IYCwE5JeDP+ECDORWmjMVyDuuumoykmmGgSvyxpm6HXgjXkIry7gzXfAibWgbwR+tXR5Buur3rZZcPsUD+3bfxdZ/8oZgC2WasplSI0i2VBHVRl/+cDTSNyENf40E6xL71Loju3MOcp1chL+yHW7tJjpgxlkhGdyJwlJtTxDbTyEZl3vI7xgdzisIjx9YjmHddroNOXSPWtpbUJ1RsKvrmqBr1Gx5tUR8Zs1FSg0J+hCaOLqfoqj/zUD+cf8UBukQ8A+IlD3vFkMbOULF7wU2CyT3wKenVp8qCKfeRmchXTZwJ1ErQjrKXlrCROeBXofS5oPnKxNwRc+GDswhiJAQzaZXNxuztjO1GgkudqG+Yxtrdk4RcjDphPuiLZQp/gkZA="
+
+node_js: 5.9.1
+
+before_script:
+    - sudo apt-get install -y chromium-browser xvfb
+    - npm install -g grunt-cli bower
+    - bower install
+
+script: grunt test-ci
